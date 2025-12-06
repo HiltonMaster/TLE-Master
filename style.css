@@ -1,0 +1,357 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3e3e3;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 80px; /* Aumentado para acomodar tabelas longas e evitar sobreposição do rodapé */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 100%;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Estilização da seção do logo */
+.logo-section {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+}
+
+/* Estilização da barra lateral */
+.sidebar {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-section, .button-section, #info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.input-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-section input[type="text"],
+.input-section textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.input-section textarea {
+    resize: vertical;
+}
+
+.input-section .tle-catalog-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.input-section .tle-catalog-link:hover {
+    text-decoration: underline;
+}
+
+.datetime-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.datetime-container input[type="text"] {
+    flex: 1;
+}
+
+.datetime-container button {
+    padding: 8px 12px;
+    background-color: #28a745;
+}
+
+.datetime-container button:hover {
+    background-color: #218838;
+}
+
+.timezone-container {
+    margin: 5px 0;
+}
+
+.timezone-container select {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.timezone-container select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.button-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#info {
+    background-color: #e9ecef;
+}
+
+#info h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#info p {
+    margin: 8px 0;
+    font-size: 0.95em;
+}
+
+/* Estilização do mapa */
+.map-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+}
+
+#map {
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    order: 1;
+}
+
+/* Estilização da barra de informações acima do mapa */
+.map-info-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    gap: 10px;
+}
+
+.map-info-bar p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #333;
+    white-space: nowrap; /* Impede quebra de linha em telas maiores */
+}
+
+.map-info-bar p strong {
+    margin-right: 5px;
+}
+
+.coords-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    order: 2;
+}
+
+.coords-bar p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #333;
+    flex: 1;
+}
+
+.coords-bar button {
+    padding: 8px 12px;
+    background-color: #28a745;
+}
+
+.coords-bar button:hover {
+    background-color: #218838;
+}
+
+.coords-bar button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.coords-bar #toggleRadius {
+    padding: 8px 12px;
+    background-color: #007bff;
+    margin-right: 10px; /* Adicionado para aumentar o espaçamento à direita */
+}
+
+.coords-bar #toggleRadius:hover {
+    background-color: #0056b3;
+}
+
+.pass-predictions {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    order: 3;
+}
+
+.pass-predictions h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.pass-predictions table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pass-predictions th,
+.pass-predictions td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.pass-predictions th {
+    background-color: #007bff;
+    color: white;
+}
+
+.pass-predictions a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.pass-predictions a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização da seção de links */
+.link-section {
+    margin: 5px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Estilização do separador */
+.link-section .separator {
+    color: #333;
+    font-size: 0.95em;
+}
+
+/* Estilização do link de instruções */
+.link-section .instructions-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.link-section .instructions-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilização do crédito no rodapé */
+.footer-credit {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    font-size: 0.8em;
+    color: #666;
+    font-family: Arial, sans-serif;
+}
+
+.footer-credit a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-credit a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    .map-container {
+        width: 100%;
+    }
+    
+    #map {
+        height: 500px;
+    }
+}
+
+/* Ajustes para telas menores (ex.: dispositivos móveis) */
+@media (max-width: 600px) {
+    .map-info-bar {
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+        gap: 8px; /* Reduz o espaçamento entre itens */
+        padding: 8px; /* Aumenta o padding para melhor legibilidade */
+    }
+    
+    .map-info-bar p {
+        white-space: normal; /* Permite quebra de linha no texto */
+        font-size: 0.85em; /* Reduz ligeiramente o tamanho da fonte */
+        flex: 1 1 45%; /* Cada <p> ocupa ~45% da largura, permitindo 2 por linha */
+        min-width: 0; /* Evita que o texto extrapole */
+    }
+}

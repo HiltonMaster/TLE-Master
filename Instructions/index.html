@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruções</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #e3e3e3;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+        p, ul {
+            margin: 10px 0;
+            color: #555;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .note {
+            font-style: italic;
+            color: #777;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        header {
+            display: flex;
+            flex-direction: column; /* Imagem acima do título */
+            align-items: center; /* Centraliza horizontalmente */
+            justify-content: center; /* Centraliza verticalmente */
+            margin-bottom: 20px;
+        }
+        header img {
+            height: 40px; /* Tamanho do logotipo */
+            width: auto; /* Mantém a proporção */
+            margin-bottom: 10px; /* Espaço entre imagem e título */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../images/logo_B.png" alt="Logotipo Igarashi Tracker">
+        </a>
+        <h1>INSTRUÇÕES DE USO</h1>
+    </header>
+    <div class="container">
+        <h2>Sobre TLE</h2>
+        <p>TLE (Two-Line Element) é um formato de dados usado para descrever a órbita de satélites. Ele contém dois conjuntos de números que especificam parâmetros orbitais, como a inclinação, excentricidade, argumento do perigeu e anomalia média, permitindo prever a posição de um satélite em um dado momento. É amplamente usado por sistemas de rastreamento, como o NORAD, para monitoramento e previsão de órbitas.</p>
+
+        <h2>Catálogo de TLE</h2>
+        <p>O catálogo de TLEs é uma coleção de dados de Two-Line Elements (TLE) fornecidos gratuitamente, que descrevem as órbitas de milhares de satélites e detritos espaciais rastreados pelo NORAD. Ele é atualizado regularmente e inclui TLEs para diferentes categorias, como satélites ativos, estações espaciais, cubesats e objetos em órbita baixa. O catálogo de TLEs do TLE Master está conectado ao <a href="https://celestrak.org/NORAD/elements/" target="_blank">Celestrak</a>.</p>
+
+        <h2>Fuso Horário</h2>
+        <p>No TLE Master, o seletor de fuso horário, na seção "Data e Hora", converte entradas e previsões de passagens para o fuso horário escolhido, facilitando o planejamento (o usuário pode, por exemplo, escolher um fuso horário personalizado para qualquer coordenada determinada no mapa). Pode ser usado para simular posições de satélites no horário local das coordenadas determinadas no mapa.</p>
+        <p class="note">Nota: Escolha um fuso horário antes de gerar previsões de passagens.</p>
+
+        <h2>Seletor de data e hora</h2>
+        <p>O campo "Data e Hora", na seção de entrada, permite definir um momento específico para simular a posição do satélite. Use o formato "DD/MM/AAAA HH:MM" (ex.: "05/05/2025 14:00") ou clique para selecionar via calendário. Pode ser usado para simular a posição do satélite em um horário específico. Clique em "Hoje" para preencher automaticamente o horário atual.</p>
+
+        <h2>Coordenadas do Marcador</h2>
+        <p>As "Coordenadas do Marcador", exibidas abaixo do mapa, mostram a latitude e longitude do ponto selecion        <ul>
+            <li>Identifique a localização exata para previsões de passagens.</li>
+            <li>Use as coordenadas para planejar observações em um local específico.</li>
+        </ul>
+
+        <h2>Previsão de Passagem</h2>
+        <p>A previsão de passagem é gerada ao clicar duas vezes no mapa para marcar um ponto e, após selecionar um fuso horário, clicar em "Previsão de Passagem". A ferramenta calcula quando o satélite passará sobre o ponto marcado por até 15 dias, considerando um raio de 200 km ou 1300 km. O objetivo desta ferramenta não é mostrar passagens visíveis (embora algumas das passagens exibidas possam ser visíveis), e sim mostrar quando o satélite passará perto das coordenadas fornecidas. Para passagens visíveis, use o <a href="https://www.heavens-above.com/" target="_blank">Heavens-Above</a>.</p>
+
+        <h2>Tabela de Previsões</h2>
+        <ul>
+            <li><strong>Data e Hora:</strong> Horário da passagem no fuso horário escolhido.</li>
+            <li><strong>Elevação:</strong> Indica a proximidade do satélite (Alta, Mediana ou Baixa).</li>
+            <li><strong>Simulação:</strong> Clique em "Ver no Mapa" para simular o rastreamento na data e hora da passagem.</li>
+        </ul>
+    </div>
+</body>
+</html>
