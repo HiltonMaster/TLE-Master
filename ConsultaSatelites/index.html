@@ -201,7 +201,7 @@
     <script>
         async function fetchTLE(query, type) {
             const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = '<div class="loading-spinner">⏳>';
+            resultDiv.innerHTML = '<div class="loading-spinner">⏳</div>';
             const param = type === 'NAME' ? 'NAME' : type === 'INTDES' ? 'INTDES' : 'CATNR';
             const url = `https://celestrak.org/NORAD/elements/gp.php?${param}=${encodeURIComponent(query)}&FORMAT=TLE`;
 
